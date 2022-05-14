@@ -114,8 +114,9 @@ public class Player implements mnkgame.MNKPlayer {
 							cella_prossima = upleft(cella_attuale);
 
 							if(cella_prossima.state == giocatore){
-								if (fermo = true){
+								if (fermo == false){
 									nowgoal = goal + 1;
+									if (nowgoal==myK-1)return 10000000;
 								}
 								nowtot = tot + 2;
 								iter = iter + 1;
